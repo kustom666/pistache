@@ -1,0 +1,3 @@
+[cxx]
+  cflags = -Wall -Iinclude
+  cxxflags = -Wall -Iinclude

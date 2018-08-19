@@ -29,3 +29,10 @@ build
 *.exe
 *.out
 *.app
+
+# Buck and buckaroo
+/buck-out/
+/.buckd/
+/buckaroo/
+BUCKAROO_DEPS
+.buckconfig.local
