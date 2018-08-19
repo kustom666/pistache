@@ -1,6 +1,5 @@
 cxx_library(
   name = 'pistache',
-  header_namespace = 'pistache',
   srcs = glob([
     'src/**/*.cc',
   ]),
