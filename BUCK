@@ -10,6 +10,6 @@ cxx_library(
   exported_headers = subdir_glob([ # public include files
     ('include', '**/*.h'), # those will be exported
     ('include', '**/*.hpp'), # and accessible via <header.h>
-  ], prefix = 'pistache'),
+  ]),
   visibility = ['PUBLIC']
 )
