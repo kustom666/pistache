@@ -1,3 +1,11 @@
+prebuilt_cxx_library(
+  name = 'pthread',
+  header_only = True,
+  exported_linker_flags = [
+    '-lpthread',
+  ],
+)
+
 cxx_library(
   name = 'pistache',
   header_namespace = 'pistache',
@@ -9,8 +17,11 @@ cxx_library(
     ('include/pistache', '**/*.hpp'),
   ]),
   exported_headers = subdir_glob([ # public include files
-    ('include', '**/*.h'), # those will be exported
-    ('include', '**/*.hpp'), # and accessible via <header.h>
+    ('include/pistache', '**/*.h'), # those will be exported
+    ('include/pistache', '**/*.hpp'), # and accessible via <header.h>
   ]),
+  deps = [
+    ':pthread',
+  ],
   visibility = ['PUBLIC']
 )
