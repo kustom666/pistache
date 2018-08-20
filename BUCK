@@ -1,11 +1,12 @@
 cxx_library(
   name = 'pistache',
+  header_namespace = 'pistache',
   srcs = glob([
     'src/**/*.cc',
   ]),
   headers = subdir_glob([ # private include files
-    ('include', '**/*.h'), # they are only accesible inside the library
-    ('include', '**/*.hpp'),
+    ('include/pistache', '**/*.h'), # they are only accesible inside the library
+    ('include/pistache', '**/*.hpp'),
   ]),
   exported_headers = subdir_glob([ # public include files
     ('include', '**/*.h'), # those will be exported
